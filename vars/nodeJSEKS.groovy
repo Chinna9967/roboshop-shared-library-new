@@ -210,7 +210,8 @@ def call(Map configMap) {
                 steps {
                     sh """
                         cd helm
-                        helm upgrade ${component} -n roboshop . --set image.version=${packageVersion}
+                        sed -i 's/IMAGE_VERSION/$packageVersion/g' values.yaml
+                        helm install ${component} -n roboshop .
                     """
                 }
             }
