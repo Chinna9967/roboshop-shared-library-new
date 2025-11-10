@@ -148,7 +148,9 @@ def call(Map configMap) {
             }
 
             stage('Install dependencies') {
-                steps { sh 'npm install' }
+                steps { 
+                    sh 'npm install'
+                }
             }
 
             stage('Unit test') {
