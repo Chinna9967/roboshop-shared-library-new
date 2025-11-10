@@ -179,7 +179,7 @@ def call(Map configMap) {
                     nexusArtifactUploader(
                         nexusVersion: 'nexus3',
                         protocol: 'http',
-                        nexusUrl: 'http://54.209.239.157:8081/',
+                        nexusUrl: '54.209.239.157:8081',
                         groupId: 'com.roboshop',
                         version: packageVersion,
                         repository: component,
